@@ -19,14 +19,19 @@ class Treat {
     }
 }
 
-// class Menu
+//see a Menu
 class Menu {
     constructor() {
         // treats array
-        this.treats = [];
+        this.treats = [
+            new Treat("Calcifer’s Bacon & Eggs", "Fire Roast Coffee"),
+            new Treat("Sophie’s Sugar Cake", "Lemon Tea"),
+            new Treat("Totoro Cream Puffs", "Acorn Hot Chocolate"),
+            new Treat("Spirited Away Mochi", "Haku’s Mint Tea")
+        ];
     }
     
-    // see a menu
+    
 
     // add treats
     // prompt for food
@@ -74,11 +79,13 @@ class Menu {
                 1. Add Treat
                 2. View Treats
                 3. Delete Treat
-                4. View All Treats
-                Enter your choice (0-4):
+                Enter your choice (0-3):
             `);
-
+    
             switch (choice) {
+                case "0":
+                    alert("Goodbye!");
+                    return;
                 case "1":
                     this.addTreat();
                     break;
@@ -88,9 +95,6 @@ class Menu {
                 case "3":
                     this.deleteTreat();
                     break;
-                case "4":
-                    alert("Goodbye!");
-                    return;
                 default:
                     alert("Invalid choice! Try again.");
             }
@@ -101,15 +105,3 @@ class Menu {
 // instantiate the menu and invoke the start
 let menu = new Menu();
 menu.start();
-
-// Test treat (optional)
-//let treat1 = new Treat("Totoro Cream Puffs", "Acorn Hot Chocolate");
-//console.log(treat1);
-
-//menu.addTreat();
-//menu.addTreat();
-//menu.viewTreats();
-//menu.deleteTreat();
-//menu.viewTreats();
-
-menu.show

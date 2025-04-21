@@ -13,9 +13,9 @@
 //     food
 //     drinks
 class Treat {
-    constructor(food, drink) {
+    constructor(food) {
         this.food = food;
-        this.drink = drink;
+        //this.drink = drink;
     }
 }
 
@@ -24,23 +24,24 @@ class Menu {
     constructor() {
         // treats array
         this.treats = [
-            new Treat("Calcifer’s Bacon & Eggs", "Fire Roast Coffee"),
-            new Treat("Sophie’s Sugar Cake", "Lemon Tea"),
-            new Treat("Totoro Cream Puffs", "Acorn Hot Chocolate"),
-            new Treat("Spirited Away Mochi", "Haku’s Mint Tea")
+            new Treat("Calcifer’s Bacon & Eggs"),
+            new Treat("Fire Roast Coffee"),
+            new Treat("Sophie’s Sugar Cake"),
+            new Treat("Lemon Tea"),
+            new Treat("Totoro Cream Puffs"),
+            new Treat("Acorn Hot Chocolate"),
+            new Treat("Spirited Away Mochi"),
+            new Treat("Haku’s Mint Tea"),
         ];
     }
     
     
 
     // add treats
-    // prompt for food
-    // prompt for drink
     // create new treat and push treat into array
     addTreat() {
-        let food = prompt("Enter Food Item:");
-        let drink = prompt("Enter Drink Item:");
-        this.treats.push(new Treat(food, drink));
+        let treat = prompt("Enter Treat Item:");
+        this.treats.push(new Treat(treat));
     }
 
     // delete treats
@@ -59,7 +60,7 @@ class Menu {
         let displayTreats = '';
         for (let i = 0; i < this.treats.length; i++) {
             displayTreats += `
-            ${this.treats[i].food} ${this.treats[i].drink}\n`;
+            ${this.treats[i].food}`;
         }
 
         alert(`
